@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="textInput" placeholder="type something here">
+    <p id="message"></p>
+    <script>
+        const textInput = document.getElementById('textInput');
+        const messageDisplay = document.getElementById('message');
+
+        textInput.addEventListener('input', function(){
+            const typedText = textInput.value;
+            if (typedText === ''){
+                messageDisplay.textContent = 'input is empty';
+            }
+            else{
+                messageDisplay.textContent = `you typed ${textInput.value}`;
+            }
+        });
+    </script>
+</body>
+
+</html>
